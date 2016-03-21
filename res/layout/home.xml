@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar android:id="@+id/all_apps_progress"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         style="?android:attr/progressBarStyleHorizontal"
+         android:layout_marginLeft="5dp"
+         android:layout_marginRight="5dp" />
+
+<!--
+    <EditText android:id="@+id/SearchBar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:singleLine="true"
+        android:hint="Search" />
+-->
+    <AutoCompleteTextView android:id="@+id/SearchBar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:singleLine="true"
+        android:hint="Search" />
+
+    <GridView android:id="@+id/all_apps"
+        android:persistentDrawingCache="animation|scrolling"
+        android:alwaysDrawnWithCache="true"
+        android:scrollbars="none"
+        android:drawSelectorOnTop="false"
+        android:numColumns="auto_fit"
+        android:columnWidth="90dp"
+        android:stretchMode="spacingWidth"
+        android:layout_weight="1.0"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:stackFromBottom="false"
+        android:visibility="visible"
+        android:textFilterEnabled="true" />
+
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <menu xmlns:android="http://schemas.android.com/apk/res/android" >
+<!--
+  <item
+    android:id="@+id/menu_search"
+    android:showAsAction="always|collapseActionView"
+	android:icon="@drawable/ic_launcher"
+	android:actionLayout="@layout/action_search">
+  </item>
+-->
+  <item
+    android:id="@+id/menu_info"
+    android:showAsAction="ifRoom"
+	android:icon="@drawable/ic_info"
+	android:title="App info">
+  </item>
+   <item
+    android:id="@+id/menu_sort"
+    android:showAsAction="ifRoom"
+	android:icon="@drawable/ic_sort"
+	android:title="Sort">
+  </item>
+<!--
+  <item
+    android:id="@+id/menu_search"
+    android:showAsAction="always"
+	android:icon="@drawable/ic_launcher"
+	android:actionLayout="@layout/action_search">
+  </item>
+-->
+</menu>
