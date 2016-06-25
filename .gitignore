@@ -30,3 +30,15 @@ proguard/
 
 # Android Studio captures folder
 captures/
+
+# Android Studio project files generated from gradle config
+/.idea
+*.iml
+.DS_Store 
+# Eclipse ADT
+.classpath
+.project
+.settings/
+
+# generated apk files from ant
+RocketLaunch_Pro

@@ -46,7 +46,6 @@ public class ApplicationInfoArray extends ArrayList<mApplicationInfo>{
                 while ( (line = bufferedReader.readLine()) != null ) {
                     if (line.length() > 0) {
                         mApplicationInfo appInfo = new mApplicationInfo(line);
-                        appInfo.setActivity();
                         if (appInfo.isValid()) {
                             res.add(appInfo);
                         }

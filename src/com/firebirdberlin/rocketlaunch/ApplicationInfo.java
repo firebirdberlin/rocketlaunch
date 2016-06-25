@@ -73,8 +73,12 @@ class mApplicationInfo {
 		activityName = app_info_str_split[2];
 		usage        = Integer.parseInt(app_info_str_split[3]);
 		confirmedByApplicationManager = false;
-		setActivity();
-		valid = true;
+		if (packageName != null && activityName != null) {
+			setActivity();
+			valid = true;
+		} else {
+			valid = false;
+		}
 		//calculateAlternateLabelAndPackageName();
 	}
 
