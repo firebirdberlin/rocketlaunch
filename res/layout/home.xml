@@ -28,16 +28,16 @@
     <GridView android:id="@+id/all_apps"
         android:persistentDrawingCache="animation|scrolling"
         android:alwaysDrawnWithCache="true"
-        android:scrollbars="none"
         android:drawSelectorOnTop="false"
         android:numColumns="auto_fit"
-        android:columnWidth="90dp"
+        android:columnWidth="100dp"
         android:stretchMode="spacingWidth"
         android:layout_weight="1.0"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:stackFromBottom="false"
         android:visibility="visible"
+        android:scrollbarStyle="outsideInset"
         android:textFilterEnabled="true" />
 
 

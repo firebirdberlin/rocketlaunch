@@ -261,8 +261,6 @@ public class RocketLaunch extends Activity {
             startActivity(intent);
 
         } catch ( ActivityNotFoundException e ) {
-            //e.printStackTrace();
-
             //Open the generic Apps page:
             Intent intent = new Intent(android.provider.Settings.ACTION_MANAGE_APPLICATIONS_SETTINGS);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK
@@ -294,10 +292,11 @@ public class RocketLaunch extends Activity {
      */
     private class ApplicationLauncher implements AdapterView.OnItemClickListener {
         public void onItemClick(AdapterView parent, View v, int position, long id) {
+
             mApplicationInfo app = (mApplicationInfo) parent.getItemAtPosition(position);
             app.usage++;
-
             AppAdapter.save();
+
             if (SearchBar != null){
                 SearchBar.setText("");
             }

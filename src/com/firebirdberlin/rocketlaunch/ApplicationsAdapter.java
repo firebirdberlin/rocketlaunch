@@ -64,7 +64,7 @@ class ApplicationsAdapter extends ArrayAdapter<mApplicationInfo> implements Sect
         }
 
         Collections.sort(mOriginalData,compByAlpha); // Sort in order to ...
-        mOriginalData.saveToFile("apps.dat");         // ... save the data
+        mOriginalData.saveToFile("apps.dat");        // ... save the data
 
 
         if (mOriginalData_present == false) mOriginalData = null;
