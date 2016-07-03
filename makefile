@@ -2,7 +2,7 @@
 
 
 release:
-	ant release -f RocketLaunchPro.build.xml 
+	ant release -f RocketLaunchPro.build.xml
 
 debug:
 	ant debug -f RocketLaunchPro.build.xml
@@ -23,12 +23,12 @@ cleanlite:
 	rm -rf src_RocketLaunchLite
 
 uninstall:
-	adb -d uninstall com.firebirdberlin.rocketlaunch
+	adb $(OPT) uninstall com.firebirdberlin.rocketlaunch
 
 install:
-	adb -d install -r  RocketLaunch_Pro/RocketLaunch-release.apk
+	adb $(OPT) install -r  RocketLaunch_Pro/RocketLaunch-release.apk
 
 
 uninstalllite:
-	adb -d uninstall com.firebirdberlin.rocketlaunchlite
+	adb $(OPT) uninstall com.firebirdberlin.rocketlaunchlite
 
