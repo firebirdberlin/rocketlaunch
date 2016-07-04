@@ -131,6 +131,7 @@ class mApplicationInfo {
     }
 
     public void saveIconCache(Context ctx){
+        if (icon == null) return;
         try{
             FileOutputStream outStream;
             String filename = ctx.getCacheDir() + "/" + hashCode() + ".png";
