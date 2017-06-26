@@ -330,7 +330,9 @@ public class RocketLaunch extends Activity {
             AppsList.addAll(params[0]);
 
             for (int i = AppsList.size()-1; i >= 0 ; i--){
-                AppsList.get(i).confirmedByApplicationManager = false;
+                mApplicationInfo appInfo = AppsList.get(i);
+                appInfo.confirmedByApplicationManager = false;
+                Logger(String.format("%s", appInfo.toString()));
             }
 
             PackageManager manager = getPackageManager();
@@ -351,7 +353,6 @@ public class RocketLaunch extends Activity {
                 for (int i = 0; i < count; i++) {
                     mApplicationInfo application = new mApplicationInfo();
                     ResolveInfo info = apps.get(i);
-                    //Log.d(LOG_TAG, info.activityInfo.applicationInfo.packageName);
                     application.title = info.loadLabel(manager);
                     application.packageName = info.activityInfo.applicationInfo.packageName;
                     application.activityName = info.activityInfo.name;
@@ -360,7 +361,7 @@ public class RocketLaunch extends Activity {
 
                     //if (isDestroying == true ) break;
                     // ignore self
-                    if (info.activityInfo.applicationInfo.packageName.equals("com.firebirdberlin.rocketlaunch")) continue;
+                    if (info.activityInfo.applicationInfo.packageName.equals(getPackageName())) continue;
 
                     int mAppIdx = AppsList.indexOf(application);
 
@@ -376,7 +377,7 @@ public class RocketLaunch extends Activity {
                 }
             }
 
-            for (int i = AppsList.size()-1; i >= 0 ; i--){
+            for (int i = AppsList.size() - 1; i >= 0 ; i--){
                 if (AppsList.get(i).confirmedByApplicationManager == false){
                     AppsList.remove(i);
                 }
